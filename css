@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to bottom right, #d56fb8, #691b3a);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 8rem;
+  background-color: rgb(36, 35, 35);
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+ul li {
+  list-style: none;
+  padding: 0.7rem;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+.hamMenuHead {
+  color: white;
+  font-size: 2rem;
+  padding-left: 0.8rem;
+}
+.hamMenu {
+  display: none;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 2rem;
+  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 8px;
+  justify-content: space-evenly;
+}
+.ham-lines {
+  background-color: white;
+  width: 80%;
+  height: 3px;
+  margin-left: 3.5px;
+
+  border-radius: 2px solid white;
+}
+
+.hidden {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0px;
+  transition: all 1s;
+  background-color: rgb(96, 82, 82);
+}
+.drop--menu {
+  display: none;
+}
+.hidden ul {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 4rem;
+}
+.hidden ul li {
+  padding-bottom: 1rem;
+}
+.hidden ul li a :hover {
+  background-color: black;
+}
+@media screen and (max-width: 550px) {
+  nav ul {
+    display: none;
+  }
+
+  .hamMenu {
+    display: flex;
+    cursor: pointer;
+  }
+}
